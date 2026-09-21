@@ -15,48 +15,46 @@
 
 项目不是将需求文字直接转换成测试用例或代码。
 
-测试用例生成必须经过完整测试分析：
+测试用例生成必须经过完整测试分析（18 步，以 `00_AITestCaseGeneration - Main Rule.md` 为唯一真源）：
 
 ```text
-需求理解
+STEP 1    读取需求
 ↓
-需求建模
+STEP 2    需求结构化分析
 ↓
-功能拆解
+STEP 3    功能拆解
 ↓
-业务规则分析
+STEP 4    业务规则拆解
 ↓
-数据分析
+STEP 5    数据分析
 ↓
-状态分析
+STEP 6    状态分析
 ↓
-权限分析
+STEP 7    权限分析
 ↓
-依赖分析
+STEP 8    异常 / 网络 / 依赖分析
 ↓
-风险分析
+STEP 9    建立测试场景矩阵
 ↓
-测试场景设计
+STEP 10   风险分析
 ↓
-领域风险交叉检查
+STEP 10.1 领域风险清单交叉校验
 ↓
-测试用例生成
+STEP 11   生成测试用例
 ↓
-需求追踪
+STEP 12   建立需求追踪关系
 ↓
-质量检查
+STEP 13   覆盖率检查
 ↓
-覆盖率检查
+STEP 14   自动补充遗漏
 ↓
-遗漏补充
+STEP 15   去重和合并
 ↓
-去重
+STEP 16   确定 P0 / P1 / P2
 ↓
-优先级
+STEP 17   筛选冒烟用例
 ↓
-冒烟测试
-↓
-最终输出
+STEP 18   最终输出
 ```
 
 当用户明确要求自动化时，在测试用例完成并通过质量检查后继续：
@@ -181,18 +179,17 @@ UI / API 分类
 风险分析
 ```
 
-每条正式测试用例必须具备：
+每条正式测试用例必须具备（字段口径以 `03` + `06` 为准，共 9 项）：
 
-- 测试编号
-- 模块
-- 测试标题
-- 前置条件
-- 测试数据
-- 测试步骤
-- 预期结果
+- 用例ID
+- 一级模块
+- 二级模块
+- 前置步骤
+- 用例名称
+- 测试点
 - 优先级
-- 冒烟标识
-- 测试依据 / 追踪关系
+- 操作步骤
+- 预期结果
 
 要求：
 
@@ -471,12 +468,12 @@ project/
 例如：
 
 ```text
-TC_LOGIN_001 → test_login_success
-TC_LOGIN_002 → test_login_invalid_password
-TC_LOGIN_003 → MANUAL
+XH_ORD_001 → test_create_order_success
+XH_ORD_002 → test_create_order_invalid_password
+XH_ORD_003 → MANUAL
 ```
 
-测试用例 ID 与 Python 函数名分离。
+测试用例 ID 与 Python 函数名分离：ID 直接复用测试用例的 Case ID，不重新编号；MANUAL 用例无脚本但保留 ID。
 
 ---
 
@@ -502,6 +499,7 @@ AI-TestCase-Generator/
 │   │
 │   └── rules/
 │       │
+│       ├── README.md
 │       ├── 00_AITestCaseGeneration - Main Rule.md
 │       ├── 01_RequirementAnalysis_Rule.md
 │       ├── 02_ScenarioAnalysis_Rule.md
@@ -717,7 +715,8 @@ Skill 负责流程控制，Rules 负责专业细节。
 
 | Rule | 职责 |
 |---|---|
-| `00_AITestCaseGeneration - Main Rule.md` | 测试用例生成总控、质量门禁和总体约束 |
+| `README.md` | 真源声明入口（权威源映射与修改纪律） |
+| `00_AITestCaseGeneration - Main Rule.md` | 测试用例生成总控、质量门禁、总体约束与权威源声明 |
 | `01_RequirementAnalysis_Rule.md` | 需求结构化分析 |
 | `02_ScenarioAnalysis_Rule.md` | 测试场景分析 |
 | `03_TestCaseGeneration_Rule.md` | 测试用例生成 |
@@ -832,19 +831,19 @@ API Automation Rules
 请根据这些测试用例生成完整的 Appium + Pytest 自动化项目。
 ```
 
-除测试脚本外，还应输出：
+除测试脚本外，还应输出（清单以 `Automation Rules/00` 的 Final Output 为唯一真源，共 11 项）：
 
-- 项目目录
-- 配置文件
-- 公共封装
-- 测试数据
-- Fixture
-- requirements.txt
-- pytest.ini
-- README
-- 执行方式
-- 测试用例 → 脚本映射
-- MANUAL / PARTIAL 用例及原因
+1. 自动化类型
+2. 自动化可行性分析
+3. AUTO / PARTIAL / MANUAL 清单
+4. 测试用例 → 脚本映射
+5. 项目目录结构
+6. Python 自动化代码
+7. requirements.txt
+8. pytest 配置
+9. README / 执行说明
+10. 环境依赖
+11. 无法自动化项及原因
 
 ---
 

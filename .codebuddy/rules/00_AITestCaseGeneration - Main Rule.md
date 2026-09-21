@@ -54,9 +54,9 @@ STEP 7 权限分析
    ↓
 STEP 8 异常/网络/依赖分析（必须输出依赖清单与失败模式）
    ↓
-STEP 9 风险分析
+STEP 9 建立测试场景矩阵
    ↓
-STEP 10 建立测试场景矩阵
+STEP 10 风险分析
    ↓
 STEP 10.1 领域风险清单交叉校验（07_DomainRiskChecklist_Rule）
    ↓
@@ -83,7 +83,7 @@ STEP 18 最终输出
 
 # Rule Loading
 
-执行过程中必须遵循以下职责划分：
+## 职责划分
 
 - 需求分析 → `01_RequirementAnalysis_Rule.md`
 - 场景分析 → `02_ScenarioAnalysis_Rule.md`
@@ -92,6 +92,32 @@ STEP 18 最终输出
 - 优先级/冒烟 → `05_Priority&Smoke_Rule.md`
 - 最终输出 → `06_TestCaseOutput_Rule.md`
 - 领域风险清单 → `07_DomainRiskChecklist_Rule.md`（场景矩阵完成后必须交叉校验）
+- 自动化主流程 → `Automation Rules/00_Automation Main Control Rule.md`
+- UI / API 技术细节 → `Automation Rules/UI Automation/01~10`、`Automation Rules/API Automation/01~10`
+
+## 权威源唯一性（SSOT）
+
+以下内容全体系只允许有一份正文，其他位置必须引用而非复述：
+
+| 内容 | 唯一真源 |
+|---|---|
+| 测试分析流程（18 步） | 本文件 |
+| 各阶段细节 | `01`~`07` |
+| 领域风险校验时机 | 本文件 STEP 10.1 |
+| 优先级 | `05_Priority&Smoke_Rule.md`（P0/P1/P2） |
+| 输出格式与表格 | `06_TestCaseOutput_Rule.md` |
+| 用例字段 | `03_TestCaseGeneration_Rule.md` + `06_TestCaseOutput_Rule.md` |
+| 异常 / 业务规则拦截判定 | `04_TestCaseQuality_Rule.md` 第 2.1 节 |
+| 自动化主流程 + 交付物清单（11 项） | `Automation Rules/00_Automation Main Control Rule.md` |
+| UI 定位策略 | `Automation Rules/UI Automation/04_UI Locator Rule.md` |
+| API 必填信息 | `Automation Rules/API Automation/04_API Information Extraction Rule.md` |
+| 项目目录结构 | `test-automation-generation` Skill 第 6 节 |
+
+## 修改纪律
+
+改动任一流程或规则前，必须先确认该内容是否已在 `commands/`、`skills/`、`agents/` 中被复述；若已复述，必须同步改为引用。
+
+执行层（`commands/testcase.md`、`skills/**/SKILL.md`、`agents/test-analyst.md`）只负责编排与角色职责，不得复述上述流程细节。
 
 ---
 
@@ -223,6 +249,8 @@ STEP 18 最终输出
 # Completion Criteria
 
 只有满足以下条件才算完成：
+
+（输出格式以 `06_TestCaseOutput_Rule.md` 的十段顺序为准）
 
 ```text
 需求理解
