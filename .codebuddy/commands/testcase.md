@@ -23,7 +23,8 @@
 | 领域风险交叉校验时机 | `00_Main` STEP 10.1（场景矩阵完成后、用例生成之前） |
 | 用例字段 | `03_TestCaseGeneration_Rule.md` + `06_TestCaseOutput_Rule.md` |
 | 优先级 | `05_Priority&Smoke_Rule.md`（P0/P1/P2） |
-| 输出格式 | `06_TestCaseOutput_Rule.md`（十段顺序） |
+| 内部分析顺序 | `06_TestCaseOutput_Rule.md`（十段顺序，不进入交付物） |
+| 交付物格式与交付范围 | `00_OutputFormat_Rule.md` |
 | 自动化主流程 | `Automation Rules/00_Automation Main Control Rule.md` |
 | 自动化交付物清单 | `Automation Rules/00_Automation Main Control Rule.md` 的 Final Output |
 | UI / API 技术细节 | `Automation Rules/UI Automation/01~10`、`API Automation/01~10` |

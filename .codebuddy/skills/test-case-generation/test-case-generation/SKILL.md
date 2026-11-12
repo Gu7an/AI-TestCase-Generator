@@ -34,7 +34,8 @@ description: 根据需求、PRD、接口文档、原型和业务规则，执行�
 | 用例生成 | `03_TestCaseGeneration_Rule.md` |
 | 质量检查 | `04_TestCaseQuality_Rule.md` |
 | 优先级 / 冒烟 | `05_Priority&Smoke_Rule.md` |
-| 最终输出 | `06_TestCaseOutput_Rule.md` |
+| 内部分析输出 | `06_TestCaseOutput_Rule.md` |
+| 交付物格式与交付范围 | `00_OutputFormat_Rule.md` |
 | 领域风险清单 | `07_DomainRiskChecklist_Rule.md`（场景矩阵完成后交叉校验） |
 
 ---
@@ -45,7 +46,8 @@ description: 根据需求、PRD、接口文档、原型和业务规则，执行�
 用例字段 ：以 03 + 06 为准（9 列：用例ID / 一级模块 / 二级模块 / 前置步骤 /
            用例名称 / 测试点 / 优先级 / 操作步骤 / 预期结果）
 优先级   ：P0 / P1 / P2，以 05 为准
-输出格式 ：以 06 的十段顺序为准
+内部顺序 ：以 06 的十段顺序为准，必须完整执行但不进入交付物
+交付范围 ：以 00_OutputFormat_Rule.md 为准
 领域校验 ：场景矩阵完成后、用例生成之前，按 07 交叉校验
 异常统计 ：业务规则拦截不计入异常，判定标准见 04 第 2.1 节
 ```

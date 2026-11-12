@@ -90,7 +90,8 @@ STEP 18 最终输出
 - 用例生成 → `03_TestCaseGeneration_Rule.md`
 - 质量检查 → `04_TestCaseQuality_Rule.md`
 - 优先级/冒烟 → `05_Priority&Smoke_Rule.md`
-- 最终输出 → `06_TestCaseOutput_Rule.md`
+- 最终输出（内部十段分析） → `06_TestCaseOutput_Rule.md`
+- 交付物文件格式、Excel 结构与交付范围 → `00_OutputFormat_Rule.md`
 - 领域风险清单 → `07_DomainRiskChecklist_Rule.md`（场景矩阵完成后必须交叉校验）
 - 自动化主流程 → `Automation Rules/00_Automation Main Control Rule.md`
 - UI / API 技术细节 → `Automation Rules/UI Automation/01~10`、`Automation Rules/API Automation/01~10`
@@ -105,7 +106,8 @@ STEP 18 最终输出
 | 各阶段细节 | `01`~`07` |
 | 领域风险校验时机 | 本文件 STEP 10.1 |
 | 优先级 | `05_Priority&Smoke_Rule.md`（P0/P1/P2） |
-| 输出格式与表格 | `06_TestCaseOutput_Rule.md` |
+| 内部分析章节顺序与表格字段口径 | `06_TestCaseOutput_Rule.md` |
+| 交付物文件格式、Excel 结构与交付范围 | `00_OutputFormat_Rule.md` |
 | 用例字段 | `03_TestCaseGeneration_Rule.md` + `06_TestCaseOutput_Rule.md` |
 | 异常 / 业务规则拦截判定 | `04_TestCaseQuality_Rule.md` 第 2.1 节 |
 | 自动化主流程 + 交付物清单（11 项） | `Automation Rules/00_Automation Main Control Rule.md` |
@@ -219,7 +221,7 @@ STEP 18 最终输出
 [ ] 重复用例已经处理
 [ ] 优先级已经确定
 [ ] 冒烟用例已经筛选
-[ ] 最终格式符合要求
+[ ] 最终格式与交付范围符合 `00_OutputFormat_Rule.md`（分析已完整执行，只是不展示）
 ```
 
 任何一项未完成，不得声明任务完成。
@@ -250,7 +252,8 @@ STEP 18 最终输出
 
 只有满足以下条件才算完成：
 
-（输出格式以 `06_TestCaseOutput_Rule.md` 的十段顺序为准）
+（内部分析以 `06_TestCaseOutput_Rule.md` 的十段顺序完整执行；
+最终交付载体、Excel 结构与交付范围以 `00_OutputFormat_Rule.md` 为准）
 
 ```text
 需求理解

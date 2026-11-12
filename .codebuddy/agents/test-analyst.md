@@ -85,7 +85,7 @@ description: 专业的软件测试分析与自动化测试智能体。负责将�
 用例质量检查以 `04_TestCaseQuality_Rule.md` 为准。
 
 用例字段、命名与 Case ID 格式以 `03_TestCaseGeneration_Rule.md` + `06_TestCaseOutput_Rule.md` 为准。
-输出格式以 `06` 的十段顺序为准。
+内部分析顺序以 `06` 的十段顺序为准（不得跳过，但不进入交付物）；交付物格式与交付范围以 `00_OutputFormat_Rule.md` 为准。
 
 ---
 
@@ -98,7 +98,8 @@ description: 专业的软件测试分析与自动化测试智能体。负责将�
 | 测试用例生成 | `03_TestCaseGeneration_Rule.md` |
 | 质量检查 | `04_TestCaseQuality_Rule.md` |
 | 优先级 / 冒烟 | `05_Priority&Smoke_Rule.md` |
-| 最终输出 | `06_TestCaseOutput_Rule.md` |
+| 内部分析输出 | `06_TestCaseOutput_Rule.md` |
+| 交付物格式与交付范围 | `00_OutputFormat_Rule.md` |
 | 领域风险 | `07_DomainRiskChecklist_Rule.md` |
 | 自动化主流程 | `Automation Rules/00_Automation Main Control Rule.md` |
 | UI 自动化 | `Automation Rules/UI Automation/01~10` |

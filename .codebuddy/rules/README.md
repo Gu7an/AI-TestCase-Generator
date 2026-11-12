@@ -39,7 +39,8 @@ Automation Rules
 | 用例生成（含字段规范） | `03_TestCaseGeneration_Rule.md` |
 | 质量检查（含异常/业务规则拦截判定） | `04_TestCaseQuality_Rule.md` |
 | 优先级与冒烟 | `05_Priority&Smoke_Rule.md`（P0/P1/P2） |
-| 输出格式与表格 | `06_TestCaseOutput_Rule.md` |
+| 内部分析章节顺序与表格口径 | `06_TestCaseOutput_Rule.md` |
+| 交付物文件格式、Excel 结构与交付范围 | `00_OutputFormat_Rule.md` |
 | 领域风险清单 | `07_DomainRiskChecklist_Rule.md` |
 | 自动化主流程 + 交付物清单 | `Automation Rules/00_Automation Main Control Rule.md` |
 | UI 定位策略 | `Automation Rules/UI Automation/04_UI Locator Rule.md` |
@@ -54,7 +55,7 @@ Automation Rules
 2. 领域风险清单必须在场景矩阵完成后交叉校验（`00_Main` STEP 10.1）。
 3. 优先级只有 P0/P1/P2 三档，P0 占比控制在 20%~35%。
 4. 用例字段以 `03` + `06` 为准，执行层不得自定义字段。
-5. 输出格式以 `06` 的十段顺序为准。
+5. 内部分析顺序以 `06` 的十段顺序为准且必须完整执行；最终交付范围与格式以 `00_OutputFormat_Rule.md` 为准。
 6. 异常场景与业务规则拦截分开统计（`04` 第 2.1 节）。
 7. 禁止虚构需求、业务规则、接口与测试数据。
 

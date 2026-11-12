@@ -1,5 +1,5 @@
 ---
-description: 测试用例生成完成后的统一输出格式和结果展示规则。
+description: 测试用例生成的内部十段分析顺序、用例表字段口径与覆盖率检查规则；最终交付范围见 00_OutputFormat_Rule.md。
 globs:
   - "**/*.md"
   - "**/*.txt"
@@ -9,9 +9,12 @@ alwaysApply: false
 
 # Test Case Output Rule
 
-## Final Output Order
+## Internal Analysis Order
 
-最终输出必须按照以下顺序：
+内部分析必须完成以下十段并按顺序检查（不得跳过）。
+
+其中仅第五段「测试用例」与第十段「冒烟测试用例」进入最终交付物；
+交付范围以 `00_OutputFormat_Rule.md` 为准（唯一真源），其余八段不展示。
 
 ```text
 一、需求分析摘要
@@ -50,7 +53,7 @@ alwaysApply: false
 
 # Coverage Report
 
-输出：
+内部质量检查记录（必须完成，但不进入交付物、不展示）：
 
 ```text
 需求覆盖：
@@ -160,12 +163,9 @@ X
 
 不要为了展示AI分析过程输出大量无关内容。
 
-测试用例最终应该能够直接复制到：
+最终交付物一律为 `.xlsx` Excel 文档，且只交付「测试用例」与「冒烟测试用例」两部分。
 
-- Excel
-- 测试管理平台
-- CSV
-- Word
-- XMind
-- 飞书
-- HTML
+交付范围、载体、Sheet 结构、命名与保存位置，
+一律引用 `00_OutputFormat_Rule.md`（唯一真源）；本文件只规定内部十段分析与表格内容口径。
+
+对话回复只给简短摘要与文件路径，禁止粘贴用例表正文、规则矩阵与覆盖率报告。
